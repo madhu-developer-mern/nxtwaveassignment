@@ -1,20 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { 
-  ArrowLeft, 
-  Calendar, 
-  Clock, 
-  User, 
-  Stethoscope, 
-  Pill, 
-  FileText, 
-  Activity,
-  Phone,
-  Mail,
-  MapPin,
-  Download,
-  Print
-} from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, Stethoscope, Pill, FileText, Activity, Phone, Mail, MapPin, Download, Printer as Print } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 interface Prescription {
