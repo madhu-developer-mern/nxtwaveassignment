@@ -71,6 +71,14 @@ export function Header() {
                     Dashboard
                   </Link>
                 )}
+                {state.user?.role === 'patient' && (
+                  <Link
+                    to="/patient/dashboard"
+                    className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+                  >
+                    Dashboard
+                  </Link>
+                )}
                 <button
                   onClick={logout}
                   className="bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors"

@@ -10,6 +10,8 @@ import { TrackAppointmentPage } from './pages/TrackAppointmentPage';
 import { AppointmentResultPage } from './pages/AppointmentResultPage';
 import { DoctorDashboard } from './pages/DoctorDashboard';
 import { DoctorAppointments } from './pages/DoctorAppointments';
+import { PatientDashboard } from './pages/PatientDashboard';
+import { PrescriptionDetailsPage } from './pages/PrescriptionDetailsPage';
 import { LoginForm } from './components/LoginForm';
 import { RegisterForm } from './components/RegisterForm';
 
@@ -51,6 +53,12 @@ function App() {
                   <AppointmentResultPage />
                 </>
               } />
+              <Route path="/prescription/:id" element={
+                <>
+                  <Header />
+                  <PrescriptionDetailsPage />
+                </>
+              } />
               
               {/* Auth Routes */}
               <Route path="/login/patient" element={<LoginForm userType="patient" />} />
@@ -63,6 +71,14 @@ function App() {
               {/* Doctor Routes */}
               <Route path="/doctor/dashboard" element={<DoctorDashboard />} />
               <Route path="/doctor/appointments" element={<DoctorAppointments />} />
+              
+              {/* Patient Routes */}
+              <Route path="/patient/dashboard" element={
+                <>
+                  <Header />
+                  <PatientDashboard />
+                </>
+              } />
             </Routes>
           </div>
         </Router>
